@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BookTool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/PaperThin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "EB Garamond", sans-serif
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="black" id="tour">
+            <div class="container content padding-64" style="max-width:800px">
+                <h2 class="wide center">TOUR DATES</h2>
+                <p class="opacity center"><i>Remember to book your tickets!</i></p><br>
+
+                <ul class="ul border white text-grey">
+                    <li class="padding">September <span class="tag red margin-left">Sold out</span></li>
+                    <li class="padding">October <span class="tag red margin-left">Sold out</span></li>
+                    <li class="padding">November <span class="badge right margin-right">3</span></li>
+                </ul>
+
+                <div class="row-padding padding-32" style="margin:0 -16px">
+                    <div class="third margin-bottom">
+                        <img src="/paperimages/newyork.jpg" alt="New York" style="width:100%" class="hover-opacity">
+                        <div class="container white">
+                            <p><b>New York</b></p>
+                            <p class="opacity">Fri 27 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="button black margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'">Buy
+                                Tickets</button>
+                        </div>
+                    </div>
+                    <div class="third margin-bottom">
+                        <img src="/paperimages/paris.jpg" alt="Paris" style="width:100%" class="hover-opacity">
+                        <div class="container white">
+                            <p><b>Paris</b></p>
+                            <p class="opacity">Sat 28 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="button black margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'">Buy
+                                Tickets</button>
+                        </div>
+                    </div>
+                    <div class="third margin-bottom">
+                        <img src="/paperimages/sanfran.jpg" alt="San Francisco" style="width:100%"
+                            class="hover-opacity">
+                        <div class="container white">
+                            <p><b>San Francisco</b></p>
+                            <p class="opacity">Sun 29 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="button black margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'">Buy
+                                Tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticket Modal -->
+        <div id="ticketModal" class="modal">
+            <div class="modal-content animate-top card-4">
+                <header class="container teal center padding-32">
+                    <span onclick="document.getElementById('ticketModal').style.display='none'"
+                        class="button teal xlarge display-topright">×</span>
+                    <h2 class="wide"><i class="fa fa-suitcase margin-right"></i>Tickets</h2>
+                </header>
+                <div class="container">
+                    <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+                    <input class="input border" type="text" placeholder="How many?">
+                    <p><label><i class="fa fa-user"></i> Send To</label></p>
+                    <input class="input border" type="text" placeholder="Enter email">
+                    <button class="button block teal padding-16 section right">PAY <i class="fa fa-check"></i></button>
+                    <button class="button red section"
+                        onclick="document.getElementById('ticketModal').style.display='none'">Close
+                        <i class="fa fa-remove"></i></button>
+                    <p class="right">Need <a href="#" class="text-blue">help?</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Contact Section -->
+        <div class="container content padding-64" style="max-width:800px" id="contact">
+            <h2 class="wide center">CONTACT</h2>
+            <p class="opacity center"><i>Fan? Drop a note!</i></p>
+            <div class="row padding-32">
+                <div class="col m6 large margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+                </div>
+                <div class="col m6">
+                    <form action="/action_page.php" target="_blank">
+                        <div class="row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="half">
+                                <input class="input border" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="half">
+                                <input class="input border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="input border" type="text" placeholder="Message" required name="Message">
+                        <button class="button black section right" type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

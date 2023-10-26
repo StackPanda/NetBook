@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>BookTool</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/PaperThin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    html {
+      font-family: "EB Garamond", sans-serif;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <div class="black card">
+      <div class="bar" style="width: auto;">
+        <a onclick="navigateTo('/views/home')" class="bar-item button white padding-large">BookTool</a>
+        <div class="dropdown-hover hide-small right">
+          <button class="padding-large button" title="More">MORE <i class="fa fa-caret-down"
+              style="margin-left:8px"></i></button>
+          <div class="dropdown-content bar-block card-4">
+            <a onclick="navigateTo('/views/account')" class="bar-item button">ACCOUNT</a>
+            <a onclick="navigateTo('/views/settings')" class="bar-item button">SETTINGS</a>
+            <a onclick="navigateTo('/views/signup')" class="bar-item button">SIGN UP</a>
+            <a onclick="navigateTo('/views/login')" class="bar-item button">LOGIN</a>
+          </div>
+        </div>
+        <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)"
+          onclick="smallMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+    <div class="black card">
+      <div class="bar" style="width: auto;">
+        <a onclick="navigateTo('/views/home')" class="bar-item button padding-large">HOME</a>
+        <a onclick="navigateTo('/views/about')" class="bar-item button padding-large hide-small">ABOUT</a>
+        <a onclick="navigateTo('/views/following')" class="bar-item button padding-large hide-small right">FOLLOWING</a>
+        <a onclick="navigateTo('/views/explore')" class="bar-item button padding-large hide-small right">EXPLORE</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="navDemo" class="bar-block black hide hide-large hide-medium top" style="margin-top:46px">
+    <a href="/" class="bar-item button padding-large">HOME</a>
+    <a href="/about" class="bar-item button padding-large">ABOUT</a>
+    <a href="/explore" class="bar-item button padding-large">EXPLORE</a>
+    <a href="/me/following" class="bar-item button padding-large">FOLLOWING</a>
+  </div>
+
+  <div style="width: 100%;">
+
+    <iframe id="frame" src="/views/home" style="height: calc(100vh - 46.5px); width: 100%; border: none;"></iframe>
+
+  </div>
+
+  <script>
+    function smallMenu() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+      } else {
+        x.className = x.className.replace(" show", "");
+      }
+    }
+
+    function navigateTo(url) {
+      document.getElementById('frame').src = url
+    }
+  </script>
+
+</body>
+
+</html>
